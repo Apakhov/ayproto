@@ -106,7 +106,7 @@ func (g *Generator) genHeader() {
 	for path, name := range g.pkgs {
 		g.WriteStringfn(`%s "%s"`, name, path)
 	}
-	g.WriteStringfn(`"github.com/Apakhov/ayprotogen/ayproto"`)
+	g.WriteStringfn(`"github.com/Apakhov/ayproto"`)
 	g.WriteStringfn(")")
 }
 

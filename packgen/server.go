@@ -71,7 +71,7 @@ func (s *server) gen() {
 		s.genHandle(s.ms[i], s.descrs[i])
 	}
 	s.g.WriteStringfn("default:")
-	s.g.WriteStringfn("resBt = []byte{}")
+	s.g.WriteStringfn("resBt = ayproto.GenericErrorResp")
 	s.g.WriteStringfn("}")
 	s.g.WriteStringfn("err := c.Send(ctx, ayproto.ResponseTo(p, resBt))")
 	s.g.WriteStringfn("if err != nil {")
